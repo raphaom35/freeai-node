@@ -1,10 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fetch = require('@replit/node-fetch');
-
+const cors = require('cors');
 const app = express();
 const port = 3000;
-
+app.use(cors());
 app.use(bodyParser.text({ type: 'text/plain+base64' }));
 app.use(express.static('static'));
 app.use(express.json());
