@@ -378,7 +378,7 @@ const requestOptions = {
       persona: personas[document.getElementById('persona').value]
 }),
 };
-  var base = locations[Math.floor(Math.random() * locations.length;
+  var base = locations[Math.floor(Math.random() * locations.length)];
   console.log(`Using ${base}`)
 console.log(requestOptions);
 const response = await fetch(base+"/bot/ask", requestOptions);
