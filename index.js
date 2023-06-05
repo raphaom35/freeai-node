@@ -60,10 +60,10 @@ app.post('/bot/ask', async (req, res) => {
     "https://c8.dapp.cat",
     "https://c.tokenhash.io",
     "https://c2.tokenhash.io"]
-  const prefix = prefixes[Math.floor(Math.random() * prefixes.length)]
-    console.log("Using " + prefix)
-  const url = prefix + '/api/openai/v1/chat/completions';
-  const request = await fetch(url, {
+  const prefix = prefixes[Math.floor(Math.random() * prefixes.length)] 
+    console.log("Using " + prefix) 
+  const url = prefix + '/api/openai/v1/chat/completions'; 
+  const request = await fetch(url, { 
     method: 'POST',
     headers: headers,
     body: JSON.stringify(json_data),
