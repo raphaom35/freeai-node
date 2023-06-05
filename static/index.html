@@ -334,6 +334,7 @@ const deleteButton = document.querySelector("#delete-btn");
 
 let userText = null;
 var msgs = [];
+var locations = ["","https://bot.noodles.gq","https://c0.noodles.gq","https://c1.noodles.gq","https://c2.noodles.gq","https://c3.noodles.gq","https://delightful-slug-skirt.cyclic.app"]
 const loadDataFromLocalstorage = () => {
     // Load saved chats and theme from local storage and apply/add on the page
     const themeColor = localStorage.getItem("themeColor");
@@ -377,8 +378,10 @@ const requestOptions = {
       persona: personas[document.getElementById('persona').value]
 }),
 };
+  var base = locations[Math.floor(Math.random() * locations.length;
+  console.log(`Using ${base}`)
 console.log(requestOptions);
-const response = await fetch("/bot/ask", requestOptions);
+const response = await fetch(base+"/bot/ask", requestOptions);
 const text = await response.text();
 
   const pElement = document.createElement("p");
